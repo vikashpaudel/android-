@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Dr. Vikash Paudel | Skin & Hair Specialist Kathmandu</title>
+    
+    <!-- PWA / Android Install Tags -->
+    <meta name="theme-color" content="#006495" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/png" href="https://picsum.photos/seed/drp/192/192" />
+    
+    <!-- SEO & Social Media -->
+    <meta name="description" content="Official clinical app of Dr. Vikash Paudel. Book dermatology consultations in Kathmandu & Dhangadhi. AI-powered skin health assistant included." />
+    <meta property="og:title" content="Dr. Vikash Paudel | Best Dermatologist in Kathmandu" />
+    <meta property="og:description" content="Expert care for acne, hair loss, and cosmetic dermatology. Install the app for easy booking and AI consultation." />
+    <meta property="og:image" content="https://picsum.photos/seed/drpaudel/1200/630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dr. Vikash Paudel",
+      "medicalSpecialty": "Dermatology",
+      "url": "https://vikashpaudel.com.np",
+      "logo": "https://picsum.photos/seed/drp/192/192",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+977-1-5242511",
+        "contactType": "reception"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "150"
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+      :root {
+        --md-sys-color-primary: #006495;
+        --md-sys-color-secondary: #4d616c;
+        --md-sys-color-surface: #fdfcff;
+      }
+      body {
+        font-family: 'Roboto', 'Google Sans', sans-serif;
+        background: #000;
+        margin: 0;
+        overflow: hidden;
+        overscroll-behavior: none;
+      }
+      .bg-android-wallpaper {
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%), 
+                    url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?auto=format&fit=crop&q=80&w=2000');
+        background-size: cover;
+        background-position: center;
+      }
+      .material-blur {
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.7);
+      }
+      .app-icon-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+      }
+      /* Android navigation pill bar */
+      .nav-pill {
+        transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      /* Fast loading scrollbar */
+      ::-webkit-scrollbar { width: 0px; }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Register service worker using relative path
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js')
+            .then(reg => console.log('SW registered'))
+            .catch(err => console.log('SW registration failed:', err));
+        });
+      }
+    </script>
+  </body>
+</html>

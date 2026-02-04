@@ -1,0 +1,23 @@
+
+{
+  "name": "Dr. Vikash Paudel Dermatology",
+  "short_name": "Dr. Vikash",
+  "description": "Expert skin and hair care consultations by Dr. Vikash Paudel.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fdfcff",
+  "theme_color": "#006495",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/drp/192/192",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://picsum.photos/seed/drp/512/512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
